@@ -122,6 +122,9 @@ print "b = "+b
 c = b.decode("utf-8")
 print "c = "+c
 '''
+str1 = "TexturePacker {0} - {1}/{2}-{3}.plist --sheet {1}/{2}-{3}.png".format(
+    -100, -200, -300, "{n}")
+print(str1)
 
 #int float
 """
@@ -265,6 +268,18 @@ print(list1 in list3) #true
 
 #序列
 """
+alst = [0,1,2,3,4,5,6,7]
+alst[:]  取全部成员数据项
+alst[0:] 取全部成员数据项
+alst[:-1] 取除最后一个成员之外的所有成员数据项
+alst[2:5] 得到234
+alst[::2] 每隔1个取一个成员，得到0 2 4 6
+alst[:5:2] 从0至4每隔一个取一项，得到 0 2 4 
+alst[:：-1] 从右至左取全部成员，得到7，6，5，4，3，2，1，0
+alst[5::-2] 从5至0 从右至左每隔一个取一项，得到5 3 1
+"""
+
+"""
 alst1 = [-1, 1, [-100, -200], 3.5, 4]
 print(alst1[0])
 print(alst1[-1])
@@ -384,7 +399,8 @@ print(list2)
 #--------------------------------------------------------
 
 
-#-------------------------函数-----------------------------
+#-------------------------函数----------------------------
+"""
 def function1(name="name", age="0"):
     print(name, ' : ', age)
 function1('xiehaibin')
@@ -412,4 +428,217 @@ def mysum(a, b):
     print(a, " - ", b)
 mysum(*(1, 2))
 mysum(**{'a':100,'b':200})
+"""
 #---------------------------------------------------------
+
+
+#------------------------类 class--------------------------
+"""
+def global_fun():
+    print("类 调用全局函数")
+    
+class MyClass1:
+    "MyClass help."
+    a = 10
+myClass1 = MyClass1()
+print(myClass1.__doc__) #输出类例myClass的属性__doc__
+help(myClass1) #输出类的帮助信息
+
+value = 10
+class MyClass2:
+    classCount = 0  #类属性
+
+    def __init__(self, x, y = 10): #构造函数 __只是表示是私有（python没有）
+        MyClass2.classCount += 1
+        self.x = x  #实例属性
+        self.y = y
+        global_fun()
+        
+    def mycacl(self):
+        return self.x + self.y
+
+    def __privateFunc(): #__表示是私有
+        print("__privateFunc")
+
+    @classmethod
+    def class_fun(cls):  #cls 必须有默认参数
+        print("类方法", cls.classCount)
+
+    @staticmethod
+    def static_fun():
+        print("静态方法", value)
+    
+    
+myClass2 = MyClass2(1)
+print(myClass2.mycacl())
+print(myClass2.classCount)
+myClass3 = MyClass2(10, 100)
+print(myClass3.mycacl())
+print(myClass2.classCount)
+#myClass3.__privateFunc()
+
+MyClass2.class_fun()
+MyClass2.static_fun()
+"""
+
+# 继承
+"""
+class A:
+    def __init__(self, x = 1, y = 2):
+        print("init A")
+        self.x = x
+        self.y = y
+
+    def printPoint(self):
+        print(self.x, " : ", self.y)
+
+    def getXY(self):
+        print(self.x, " : ", self.y)
+
+class B(A):
+    def __init__(self, z = 3):
+        A.__init__(self, 100, 200)
+        print("init B")
+        self.z = z
+
+    def printPoint(self):
+        print(self.x, " : ", self.y, " : ", self.z)
+
+b = B(300)
+b.printPoint()
+b.getXY()
+"""
+#----------------------------------------------------------
+
+
+#-----------------------错误 异常---------------------------
+"""
+1.AttributeError     调用不存的方法引发异常
+2.EOFError           遇到文件末尾引发异常
+3.ImportError        导入模块出错引发异常
+4.IndexError         列表越界
+5.IOError            I/O操作引发的异常，如打开文件出错等
+6.KeyError           使用字典中不存在的关键字引发
+7.NameError          使用不存的变量引
+8.TabError           语句块缩进不正确引
+9.ValueError         搜索列表中不存的值引
+10.ZeroDivisionError 除数为0引
+11.SyntaxError       语法错误
+"""
+"""
+def testTryFunc(index, value):
+    stulst = [1,2,3,4,5,6]
+    a = 0
+    try:
+        a = stulst[index]
+    except IndexError:
+        print("index error")
+    else:
+        print("else")  #没出错执行
+    finally:
+        print("finally") #总会执行
+testTryFunc(5, 10)
+
+#手动抛出异常
+for i in range(5):
+    try:
+        if i == 2:
+            raise NameError
+    except NameError:
+        print("手动抛出异常")
+    print(i)
+print("--------------")
+        
+#assert
+'''
+关闭assert语句使用python -O 来运行程序
+'''
+assert False
+"""
+#----------------------------------------------------------
+
+
+#---------------------------模块---------------------------
+import TestImport
+TestImport.testFun()
+
+"""
+常用模块
+math, random
+random.random() 生成0-1之间随机数
+random.randint(0, 10) 生成0-10之间随机数
+random.choice((1,2,3,4)) 从元组中随机返回一个值
+alst = [1,2,3,4]
+random.shuffle(alst) 对列表alst随机乱序
+"""
+#----------------------------------------------------------
+
+
+#---------------------------文件---------------------------
+#!/usr/bin/env python
+#coding = 'utf-8'
+"""
+import os
+import sys
+textType = sys.getdefaultencoding()
+print(textType)
+
+print(os.getcwd())  #获得当前目录
+
+list = os.listdir("F:\study\Python") #获得当前目录内容
+for v in list:
+    print(v)
+
+path = os.getcwd()+ "\\" + 'dir'
+print(path)
+os.rmdir(path) #删除目录
+os.mkdir(path) #创建目录
+
+#path = os.getcwd()+ "\\" + '333'
+#os.rmdir(path) #删除目录 目录必须必为空目录
+
+if os.path.isdir(path):
+    print("是目录")
+if not os.path.isfile("F:\study\Python\111.txt"):
+    print("是文件")
+
+#遍历某个目录下的所有目录
+path = '.\\testDir'
+for i in os.walk(path):
+    print(i)
+
+# 复制目录
+pathA = '.\\testDir'
+descPathA = pathA + '2'
+import shutil
+if os.path.isdir(descPathA):
+    shutil.rmtree(descPathA)
+shutil.copytree(pathA, descPathA)
+
+#查看当前文件夹下所有文件 
+for file in os.listdir(descPathA):
+    print(file)
+
+# 生成表格
+path = '.\\test1'
+filenames = []
+for a, b, files in os.walk(path):
+    if files:
+        for file in files:
+            filenames.append(file[:-4])
+            print(file[:-4])
+        #filenames.append(file[:-4] for file in files)
+        
+print('filenames = ', filenames)
+
+fname = '.\\xls\\'
+i = 0
+for files in filenames:
+    f = open(fname + str(i) + '.xls', 'w')
+    for name in files:
+        print("-- ", name)
+        f.write(name[-2:]+'\t'+name[:-2]+'\n')
+    f.close()
+    i += 1
+    """
+#----------------------------------------------------------

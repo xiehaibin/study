@@ -1,0 +1,44 @@
+1.前缀
+	int          -  n     整数
+	unsing int   -  un    32位符号整型
+	short        -  s
+	long         -  l
+	byte         -  by
+		     
+	WORD	     -  w    16位无符号整型
+	DWORD	     -  dw   32位无符号整型
+	
+	bool         -  b    布尔
+
+	char         -  ch    字符
+	char         -  sz    C字符串
+	string       -  str   字符串
+	LPSTR        -  lpsz  32位字符串指针
+
+	enum         -  en   枚举前缀
+	struct       -  st   结构体前缀
+        typedef      -  ty
+
+	array        -  arr  数组前缀
+	vector       -  ver
+	
+	
+	*            -   p    指针
+	far*         -   lp   长指针
+	(*fn)()      -   lpfn 回调函数指针  
+	handle       -   h    句柄
+
+描述部分:
+最大      Max 
+最小      Min 
+初始化    Init 
+临时变量  T（或Temp） 
+源对象    Src 
+目的对象  Dest
+计数      cnt 
+
+
+全局变量 g_ 
+常量     c_ 
+成员变量 m_ 
+静态变量 s_

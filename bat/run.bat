@@ -51,8 +51,8 @@ rem 加 /i 表示如果没有 temp1 文件夹就自动新建一个，否则会有询问
 
 
 rem 执行python脚本
-:python.py
-E:\work2\run\client\sg.exe
+python.py
+:E:\work2\run\client\sg.exe
 
 
 rem 设置cmd窗口的标题

@@ -130,10 +130,11 @@ print(str1)
 '''
 
 #获得目录
+'''
 t_path = 'res/effectsplist/000/mrshow82.plist'
 t_path_dir = os.path.dirname(t_path).strip()
 print(t_path_dir)
-
+'''
 
 #int float
 """
@@ -157,7 +158,7 @@ print type(s) #对象类型
 
 x = 2
 y = 2.0
-print(x is y) false
+print(x is y) 
 """
 
 #list 列表
@@ -650,8 +651,51 @@ for files in filenames:
     f.close()
     i += 1
     """
-
+'''
 for a, b, c in os.walk("test1"):
 	print(a, b, c)
+'''
 	
+#----------------------------------------------------------
+
+
+#----------------------------正则表达式---------------------
+import re
+
+#match   在字符串中匹配正则表达式，从第一个字符开始匹配，返回matchObject对象
+#search  在字符串中匹配正则表达式，搜索整个字符串，返回matchObject对象
+#findall 在字符串中查找所有符合正则表达式的字符串，并返回这些字符串的列表
+#sub     替换在字符串中符合正则表达式的内容，返回替换后的字符串 
+#subn    和sub一样，只不过subnh函数将返回一个元组用来保存替换的结果和替换次数
+#split   分割字符串，它返回分割后的字符串列表 
+
+s = 'List can be good'
+print(re.match('can', s))
+print(re.search('can', s))
+print(re.findall('can', s))
+print(re.sub('bad|be', 'good', s))
+print(re.subn('bad|be', 'good', s))
+print(re.split(' ', s))
+
+s1 = "<font color='#FFFF00'>ABC$VALUE$KKKKK</font><font color='#FF3333'>(BBBB3,NNNN)</font>"
+s2 = "<font color='#00FF00'>aaaaaaaaaaaaa<font color='#FFCC00'>bbb</font>cccccccccccc</font>"
+s3 = "<font color='#00FF00'>0</font>"
+s4 = "123</font>456"
+"""
+/** 富文本语法分析相关的定义 **/
+protected var m_TagBlockReg: RegExp;//用于匹配<(/)(ident) (attr='value')>字符串的正则表达式
+protected var m_AttrBlockReg: RegExp;//用于匹配(attr)='(value)'字符串的正则表达式
+protected var m_RichTagStack: Array;//富文本标签栈
+
+//构造用于解析HTML标签的正则表达式
+m_TagBlockReg = new RegExp("<([/]{0,1})([a-zA-Z_][a-zA-Z_0-9]*)([^>]*)>", "s");
+m_AttrBlockReg = new RegExp("([a-zA-Z_][a-zA-Z_0-9]*)[ \t]*=[ |\t]*'([^']*)'|([a-zA-Z_][a-zA-Z_0-9]*)[ \t]*=[ |\t]*\"([^\"]*)\"", "sg");//标志中不能使用x因为表达式中的空格有意义
+
+查找第一个富文本语法标签:"...(<FONT COLOR='#FFFFFF'>)ABC</FONT>..."
+var tagBlock: Object = m_TagBlockReg.exec(richText);
+"""
+print('-----------------------------------')
+r1 = '<([/]{0,1})([a-zA-Z_][a-zA-Z0-9]*)([^>]*)>'
+r2 = "[a-zA-Z_][a-zA-Z_0-9]*)[ \t]*=[ |\t]*'([^']*)'|([a-zA-Z_][a-zA-Z_0-9]*)[ \t]*=[ |\t]*\"([^\"]*)\""
+print(re.split(r1, s2))
 #----------------------------------------------------------

@@ -1,0 +1,96 @@
+ATN 物理攻击力
+DEF 防御力
+INT 魔法攻击力
+ATT 攻击力（ATTACK的缩写，猜测，但第一个已经有了，囧）
+SPO 是SPD吧？速度，回避物理攻击之类的
+HIT 命中率或者连击之类的
+RES 魔法防御力
+STR 力量（微量增加生命值、近战伤害力、负重力）
+CON 体质（增加生命值、负重力、精 力上限）
+DEX 灵巧（增加命中率、微量减少受到的物理损伤）
+PER 感知力（回避力、远程伤害加给、暴击率）
+LER 学识（法力上限、技能的成长率）
+WIL 意志力（影响生命值、法力、精力上限，大多数医疗、增益法术的优势属性）
+MAG 魔力（影响法力上限，大多数攻击法术的 优势属性）
+CHR 魅力（影响NPC如何对待角色，同时也影响商店道具的售价、表演收入、能有多少宠物）
+
+
+ATN 物理攻击力，数值越高造成的伤害也就越大
+DEF 物理防御力，数值越高承受敌人的物理攻击所受的伤害也就越小
+INT 魔法攻击力，数值越高使用魔法攻击时的伤害也就越大
+SPO 速度
+HIT 命中率
+RES 魔法防御力
+
+
+STR 力量,大幅度影响ATK数值的,WSP时间减少
+VIT 耐力,大幅度影响DEF数值的
+DEX 灵巧,影响命中率,弓箭系命中率,同时也影响魔法使用的时间,和回避力
+AGI 敏捷,影响回避力,同时也减少WSP时间
+WIS 智慧,大幅度影魔法攻击力和咏唱速度,同时也修正少少魔法防御力
+MND:意志力，大幅度影响魔防,也将魔力回复的时间快和加快咏唱速度
+ATK:物理攻击力
+DEF:物理防御力
+HIT:命中率
+AVD:回避率
+MGK:魔法攻击
+RGS:魔法防御力,也影响回复速度,魔力回复速度
+RNG:武器攻击范围,由当时使用武器决定
+
+
+经验值：EXP（Experience）
+战斗力：CE（Combat Effectiveness)
+血量：HP(Health Point）
+魔力值：MP(Magic Point)
+级别/级数：LV(Level)
+普通金钱：Cash/Money/Game Point(常用图标代替)
+黄金：Gold(常用图标代替)
+钻石：Diamond(常用图标代替)
+武器：Weapon
+主武器：Primary Weapon
+副武器：Secondary Weapon
+伤害：Damage
+杀敌：Kill
+弹药：AMMO/Ammunition
+爆头：Head Shot
+
+STR 力量值（攻击力）
+VIT 耐力 （防御力）
+AGI 敏捷 （回避/攻速）
+DEX 灵巧 （命中）
+DROP 掉宝率
+CRT 爆击率
+ヘイト 仇恨 分为4Rank Rank越大容易被断招
+リジェネ 回复 分为sp回复/hp回复
+　カウンター 反击 可以格档攻击/技能
+INT智力（魔法攻击力防御力）
+LUK幸运（暴击）
+MATK：魔法攻击力
+HP:血量
+SP:魔法
+ATK：物理攻击力
+DEF：物理防御
+MGK:魔法攻击
+RGS:魔法防御力,也影响回复
+CON 体质
+WIS 智慧/感知
+mov: 理论不能加减,每个人都不同的,影响移动速度,侧面反应等
+WSP: 武器攻击速度,越大就越慢. 基本能力
+HIT:命中率 AVD:回避率
+
+
+经验值：EXP（Experience）
+战斗力：CE（Combat Effectiveness)
+血量：HP(Health Point）
+魔力值：MP(Magic Point)
+级别/级数：LV(Level)
+普通金钱：Cash/Money/Game Point(常用图标代替)
+黄金：Gold(常用图标代替)
+钻石：Diamond(常用图标代替)
+武器：Weapon
+主武器：Primary Weapon
+副武器：Secondary Weapon
+伤害：Damage
+杀敌：Kill
+弹药：AMMO/Ammunition
+爆头：Head Shot

@@ -1,0 +1,9 @@
+1. bool empty() const  ;      // 如果椎栈为空 则返回true 否则返回false
+
+2. size_type size() const ;   // 返回椎栈中的元素数目
+
+3. T& top() ;                 // 返回指向栈顶元素的引用
+
+4. void push(const T& x) ;    // 在栈顶插入X
+
+5. void pop() ;               // 删除栈元素

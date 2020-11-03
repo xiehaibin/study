@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+#define ARRY_SIZE 12
+
+typedef int Elemtype;
+const int Size = 12;
+
+
+int LookUp(const int* const r, int left, int right, const int key)
+{
+	int mid = (left + right) / 2;
+
+	if(left > right)
+		return 0;
+	else
+	{
+		if(r[mid] == key)
+			return mid;
+		else if(r[mid] < key)
+		{
+			cout<<" r[mid] < key =  "<<r[mid]<<endl;
+			LookUp(r, mid+1, right, key);
+		}
+		else
+		{
+			cout<<" r[mid] > key =  "<<r[mid]<<endl;
+			LookUp(r, left, mid-1, key);
+		}
+	}
+
+	// return 0; 
+	// 此处要相当注意 在回归的时候将把0做为返回的值 如果改写成 return mid 
+	// 将返回的是 6 （因为mid 重值了三次 6， 9， 10） 返回的是第3次的结果
+	// 得到的是最后一次的结果 是第一次递归的 6 
+}
+int main(void)
+{
+	Elemtype r[ARRY_SIZE] = {-1,1,2,3,4,5,6,7,8,9,10,11};
+
+	int key = -1;
+	int i = 0;
+
+START:
+	cout<<"请输入你要查找的值："<<endl;
+	cin>>key;
+
+	i = LookUp(r, 1, ARRY_SIZE-1, key);
+
+	if(i != 0)
+		cout<<"GO: "<<r[i]<<endl;
+	else
+		cout<<"没有找到"<<endl;
+
+goto START;
+	return 0;
+}

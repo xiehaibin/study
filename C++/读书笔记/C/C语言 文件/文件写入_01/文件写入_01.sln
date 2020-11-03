@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "文件写入_01", "文件写入_01\文件写入_01.vcproj", "{0352DA20-420F-4933-8337-606EE705D45C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "文件读取_02", "文件读取_02\文件读取_02.vcproj", "{A418F86A-9A56-49B1-9AB0-4D922FE81517}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "从源文件复制到目标文件", "从源文件复制到目标文件\从源文件复制到目标文件.vcproj", "{FC0F6D73-4AA1-4B6E-A5C9-A38C30B56755}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "写入字符串", "写入字符串\写入字符串.vcproj", "{839E308B-C9F8-4F23-9DA9-A0058683B93E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "读取字符串", "读取字符串\读取字符串.vcproj", "{3A119E46-C927-4B52-8B6A-7DA7325BD74D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "等长字符串", "等长字符串\等长字符串.vcproj", "{CC36D706-7A5A-4B06-BD7E-72546441D54F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "不等长字符串处理", "不等长字符串处理\不等长字符串处理.vcproj", "{0998D62B-3002-452B-9DD2-81CE4B9F8B28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0352DA20-420F-4933-8337-606EE705D45C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0352DA20-420F-4933-8337-606EE705D45C}.Debug|Win32.Build.0 = Debug|Win32
+		{0352DA20-420F-4933-8337-606EE705D45C}.Release|Win32.ActiveCfg = Release|Win32
+		{0352DA20-420F-4933-8337-606EE705D45C}.Release|Win32.Build.0 = Release|Win32
+		{A418F86A-9A56-49B1-9AB0-4D922FE81517}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A418F86A-9A56-49B1-9AB0-4D922FE81517}.Debug|Win32.Build.0 = Debug|Win32
+		{A418F86A-9A56-49B1-9AB0-4D922FE81517}.Release|Win32.ActiveCfg = Release|Win32
+		{A418F86A-9A56-49B1-9AB0-4D922FE81517}.Release|Win32.Build.0 = Release|Win32
+		{FC0F6D73-4AA1-4B6E-A5C9-A38C30B56755}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FC0F6D73-4AA1-4B6E-A5C9-A38C30B56755}.Debug|Win32.Build.0 = Debug|Win32
+		{FC0F6D73-4AA1-4B6E-A5C9-A38C30B56755}.Release|Win32.ActiveCfg = Release|Win32
+		{FC0F6D73-4AA1-4B6E-A5C9-A38C30B56755}.Release|Win32.Build.0 = Release|Win32
+		{839E308B-C9F8-4F23-9DA9-A0058683B93E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{839E308B-C9F8-4F23-9DA9-A0058683B93E}.Debug|Win32.Build.0 = Debug|Win32
+		{839E308B-C9F8-4F23-9DA9-A0058683B93E}.Release|Win32.ActiveCfg = Release|Win32
+		{839E308B-C9F8-4F23-9DA9-A0058683B93E}.Release|Win32.Build.0 = Release|Win32
+		{3A119E46-C927-4B52-8B6A-7DA7325BD74D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3A119E46-C927-4B52-8B6A-7DA7325BD74D}.Debug|Win32.Build.0 = Debug|Win32
+		{3A119E46-C927-4B52-8B6A-7DA7325BD74D}.Release|Win32.ActiveCfg = Release|Win32
+		{3A119E46-C927-4B52-8B6A-7DA7325BD74D}.Release|Win32.Build.0 = Release|Win32
+		{CC36D706-7A5A-4B06-BD7E-72546441D54F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC36D706-7A5A-4B06-BD7E-72546441D54F}.Debug|Win32.Build.0 = Debug|Win32
+		{CC36D706-7A5A-4B06-BD7E-72546441D54F}.Release|Win32.ActiveCfg = Release|Win32
+		{CC36D706-7A5A-4B06-BD7E-72546441D54F}.Release|Win32.Build.0 = Release|Win32
+		{0998D62B-3002-452B-9DD2-81CE4B9F8B28}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0998D62B-3002-452B-9DD2-81CE4B9F8B28}.Debug|Win32.Build.0 = Debug|Win32
+		{0998D62B-3002-452B-9DD2-81CE4B9F8B28}.Release|Win32.ActiveCfg = Release|Win32
+		{0998D62B-3002-452B-9DD2-81CE4B9F8B28}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

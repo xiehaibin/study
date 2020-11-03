@@ -1,0 +1,11 @@
+ios_base::int ：打开文件，以便读取
+
+ios_base::out ：打开文件，以便写入  
+
+ios_base::ate ：打开文件，并移到文件尾
+
+ios_base::app ：追加到文件尾
+
+ios_base::trun ：如果文件存在，则截短文件
+
+ios_base::binary ：二进制文件

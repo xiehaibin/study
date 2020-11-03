@@ -1,0 +1,68 @@
+1. 通常用大写字母来表示;
+
+2. 基本类型的自定义
+   typedef int Int;
+   Int i = 0;
+
+3. 数组类型的自定义
+   typedef int STRING[5];
+   STRING srt = {1,2,3,4,5};
+
+4. 结构型的自定义
+   typedef struct
+   {
+     long l;
+     int  i;
+   }STRUCT;
+   STRUCT stu1, str2[2];
+
+5. 指针型的自定义
+   typedef int* PINT;
+   typedef char* POIT[10];
+ 
+   
+   PINT p1;    // int* p;
+   POIT p2;    // char* p2[10]
+
+===========================================
+void fun(ISTR);
+void fun2(int[5]);
+int main(void)
+{
+	typedef int INT;
+	typedef int ISTR[5];
+
+	typedef struct
+	{
+		int a;
+		float f;
+	}STRUCT;
+        typedef int* PINT;
+
+	int it[5] = {1,2,3,4,5};
+
+	INT i = 10;
+	ISTR str= {1,2,3,4,5};
+	STRUCT sut= {100, 100.01F};
+	PINT p = &i;
+
+    cout<<"INT "<< sizeof(i) <<endl;
+	cout<<"str "<< sizeof(str) <<endl;
+	cout<<"sut "<< sizeof(sut) <<endl;
+	cout<<"p "<< sizeof(p) <<endl;
+
+	fun(str);
+	fun2(it);
+	return 0;
+}
+void fun(ISTR str)
+{
+	for(int i = 0; i < 5; i++)
+		str[i] += 10;
+	return;
+}
+void fun2(int it[5])
+{
+	for(int i = 0; i < 5; i++)
+		cout<< it[i] <<endl;
+}

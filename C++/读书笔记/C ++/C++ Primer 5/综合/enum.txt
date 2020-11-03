@@ -1,0 +1,11 @@
+int main(void)
+{
+	enum bits{one,tuo, tree};
+	cout<< one <<endl;
+	bits fout;
+	fout = bits(12);
+	cout<< fout <<endl;
+	return 0;
+}
+
+枚举量是整型，可以提升为int类型，但int类型不能自动转换为枚举类型，但可以通过类型转换来复值

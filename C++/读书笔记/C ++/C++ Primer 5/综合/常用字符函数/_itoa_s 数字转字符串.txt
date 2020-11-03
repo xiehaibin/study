@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+char str[10] = "";
+
+int main()
+{
+	int i = 1234;
+ 
+	_itoa_s(i, str,  10);  // 10在此处表于十进制, 可以上 2, 8, 10, 16
+	cout<< str <<endl;
+	return 0;
+}

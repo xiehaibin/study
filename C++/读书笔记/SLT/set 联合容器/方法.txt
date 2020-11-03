@@ -1,0 +1,16 @@
+       set关键字是唯一的不会有多个相同的关键字 而multiset 可能有多个关键字相同
+
+1. set_union(a.begin(), a.end(), b.begin(), b.end(), out);  // 两个合并输出到(显示器)
+
+2. set_union(a.begin(), a.end(), b.begin(), b.end(), insert_iterator<set<int> >(c, c.begin()));
+	                                                                     // 两个合并插入到C
+
+3. set_intersection(a.begin(), a.end(), b.begin(), b.end(), out); // 查找交集
+
+4. set_difference(a.begin(), a.end(), b.begin(), b.end(), out);   // 查找并集
+
+5. copy(a.lower_bound(11), a.upper_bound(15), out); 
+	// lower_bound(11) 返回一个迭代器 该迭代器指向集合中第一个不小于关键字参数的成员
+	// upper_bound(15) 返回一个迭代器 该迭代器指向集合中第一个大于关键字参数的成员
+
+注： 因为排序决定了插入的位置，所以这种类包含只指定要插入的信息， 而不指定插入的位置

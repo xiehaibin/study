@@ -1,0 +1,16 @@
+isalnum()   如果参数是字母和数字，返回 true
+isalpha()   如果参数是字母， 返回tree
+isblank()   如果参数是空格/水平制表符，返回true
+iscntrl()   如果是控制字符， 返回true
+
+isdigit()   如果参数是数字 返回true
+isgraph()   如果参数是除空格之外的打印字符，返回1
+islower()   如果参数是小写字母， 返回1
+isprint()   如果参数是打印字符（包括空格），返回1
+ispunct()   如果参是标点符号，返回1
+isspace()   如果参数是标准空白符， 返1
+
+isupper()  如果参数是大写字母，返回1
+isxdigit() 如果参数是16进制的数字， 0-9 a-f A-F 返回1
+tolower()  如果参数是大写字符 返回小写 否则返回小写
+toupper()  如果参数是小写字符，则返回其大写，否则返回该参数

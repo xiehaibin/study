@@ -1,0 +1,9 @@
+常用开发工具集合：
+VC开发工具：   http://u.115.com/file/f213e09e8b    VC6.0英文版.rar
+C++开发工具：   http://u.115.com/file/f213e09e8b  VC6.0英文版.rar
+JDK包：   http://u.115.com/file/f21b18757f   jdk-6u15-windows-i586.exe
+Flex开发工具（含Flex SDK）：   http://u.115.com/file/f2b6d167b6  Flex_Builder_3.exe
+Java开发工具Eclipse：   http://u.115.com/file/f2cb17b1f0  Eclipse3.2.zip
+Fortran开发工具：   http://u.115.com/file/f29fc4be27  CompaqVisualFortran6.6.rar
+VB开发工具：   http://u.115.com/file/f2bf0d7a1d
+MSDN中文版： http://u.115.com/file/f94b7a76cb

@@ -1,0 +1,42 @@
+ #include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+int main(void)
+{
+   int i;
+   time_t t;
+   srand((unsigned) time(&t));
+   printf("Ten random numbers from 0 to 99\\n\\n");
+   for(i=0; i<10; i++)
+       printf("%d\\n", rand() % 100);
+   return 0;
+}
+
+RAND_MAX 可能是 rand() 返回的最大值 最小值是0 cstdlib.h
+如果不能找到正确的值 请使用 climits 中的 INT_MAX 或 limits 中int最大值
+
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+using namespace std;
+
+int fnRand(void)
+{
+      //srand(static_cast<unsigned int>(time(0))); // 放在此处将没法产生随机数 
+	int temp = 0;
+        temp = rand() * 6 / RAND_MAX;
+	return temp;
+}
+int main(void)
+{
+	srand(static_cast<unsigned int>(time(0)));
+
+	for (int i = 0; i < 50; i++)
+	{
+		if (fnRand() > 1)
+		{
+			cout<< fnRand() <<endl;
+		}
+	}
+	return 0;
+}

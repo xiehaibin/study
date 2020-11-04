@@ -1,0 +1,10 @@
+1. strchr("str", ch);
+   返回ch字符在字符串str中 第一次出现的地址 如果没有这样的字符 返回一个NULL指针
+   if((pc = strchr("xiehiabing", c)) == NULL)
+
+2.c提供了比 strcat strcpy 更安全的类似函数 strncat strncpy 因为它接受指出数组最大允许长度 
+  所以更 安全  使用strcpy_s(pc, "xie")可以消除整告
+
+
+
+	

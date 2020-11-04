@@ -1,0 +1,24 @@
+因为deque, list, queue, priority_queue, stack, vector 模板类都是序列概念的模式, 所以它们都支持以下的方法.
+
+
+X a(n, t) : 声明一个名为a的，由n个t值组成的序列
+
+X (n, t)  : 创建一个由n个t值组成的匿名序列
+
+X a(i, j) : 声明一个名为a的序列，并将其初始化为区间(i,j)的内容
+
+X (i, j)  : 创建一个匿名序列，并将其初始化为区间 (i,j)的内容
+
+
+1. insert(iterator it, const T&) : 向it所指的向量位置前插入一个对象
+
+2. insert(iterator it, size_type n, const T&X) : 向it所指向量位置前插入N个值为X的对象
+
+3. insert(a.begin, b.begin+1, b.end) : 将b中除第一个元素以外的元素 插入到a的第一个元素前面 
+                                       这使得到矢量尾部插入元素非简单
+
+1. erase(iterator) : 删除it所指向的容器对象
+
+2. erase(begin, begin+2) : 将删除第 1个和第2个
+
+3. clear() : 删除向量中的所有对象，empty() 返回true值 

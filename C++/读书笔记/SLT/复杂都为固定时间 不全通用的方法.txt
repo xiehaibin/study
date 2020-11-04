@@ -1,0 +1,22 @@
+     表达式           返回值类型         含义                   容器
+1.  a.front()         T&                 *a.begin()             vector list deque
+  
+2.  a.back()          T&                 *a.--end()             vector list deque
+
+3.  a.push_front(t)   void               a.insert(a.begin(),t)  list   deque
+
+4.  a.push_back(t)    void               a.insert(a.end(),t)    vector list  deque    
+
+5.  a.pop_front(t)    void               a.erase(a.begin())     list  deque
+
+6.  a.pop_back(t)     void               a.erase(--a.end())     vector list deque
+
+7.  a[n]              T&                 *(a.begin()+n)         vector deque
+
+8.  a.at(n)           T&                 *(a.begin()+n)         vector deque  
+
+
+注： a.at(n) 如果n落在容器的有效区间之外 则 a.at(n)将执行边界检查，并引发out_of_range
+
+     没有为 vector 定义 a.push_front(t)  是考虑到时间复杂度问 如果有100个元素 将移动100次
+     但可以固定时间复杂度来实现 a.push_front(t)

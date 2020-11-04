@@ -1,0 +1,59 @@
+   string str1 = "xie bing", str2 = "xie";
+
+          注意： 最好避免使用迭代器， 面应尽可能使用STL函数
+
+                          1.  输入 输出
+
+1. reverse_copy(&str1[0], &str1[0] + 8, ostream_iterator(cout))     // 反向输出str1 看:容器中例3
+
+2. copy(str2.begin()+2, str2.begin()+8, ostream_iterator<char>(cout));//输出部分内容 看':容器中 例3
+
+3. ostream_iterator<int, char>out_iter(cout, " ");
+	copy(va.begin(), va.end(), out_iter);     // 是2的新版本 用于输出内部类型  看:容器 例3
+
+3. for_each(vc.begin(), vc.end(), ShowReview);    // 输出区间中的内容 ShowReview是一个函数对象(也可以是一个对象 则将调用其重载的()操作符的对象) 必己定义  用于输出自定义类型 看':容器 例1  list中有各种板本
+
+
+                          2.  排序
+
+1. reverse(&str1[0], &str1[0] + 3);                // str1 字符串元素反向
+
+2. sort(str1.begin(), str1.end())                  // 默认为升幂
+   sort(str1.begin(), str1.end());                 // 供用户定义类行使用  看':容器中 例2
+   sort(str1.begin(), str1.end(), compare);        // 供用户定义类行使用  看':容器中 例2
+
+3. sort(str1.begin(), str1.end(), greater<char>());// 降幂排序 供内置类行使用
+
+                     
+4. random_shuffle(v1.begin(), v1.end());           // 随机排列该区间中的对象 但不能产生真正的随机
+ 
+
+                          3. 复制 插入
+1. copy(&str1[0], &str1[0] + 3, &str2[0]);         // 原样复制到 str2
+
+2. back_insert_iterator<vector<int> > back_iter(vb);
+	copy(va.begin(), va.end(), back_iter);     // 将元素插入到容器的尾部 看':容器中 例3
+	
+3. copy(va.begin(), va.end(), front_insert_iterator<vector<int> >(vb));  // 将元素插入到容器的前端
+	                                      // vector 不能满足这种要求 但queue满足 看:容器中 例3
+
+4. copy(va.begin(), va.end(), insert_iterator<vector<int> >(vb, vb.begin())); // 没有容器类型的限制
+	                                                               // vb.begin() 是要插入的位置
+// 上述的三上个方法必须声明容器类型的原因是：迭代器必须使用合适的容器方法
+// back_insert_iterator 的构造函数将假设传递给它的类型有一个 push_back()方法。copy()是一个
+// 独立的函，没有重新调整容器大小的权限。但前面的声明让back_iter能够使用方法 
+// vector<int>::push_back, 该方法有这样的权限   看:容器 例3
+
+
+
+
+                          4. 查找
+
+1. *find(str1.begin(), str1.end(), 'e') == 'e'     // 不是成员函数find
+
+2. transform(str1.begin(), str1.end(), out, sqrt); // 计算每个元素的平方根 并将结果发送到 显示器(str1.begin                                                      ()) 覆盖原不的值
+   transform(va.begin(), va.end(), vb.begin(), vb.begin(), plus<int>());
+3. 适器函数 看例 hongyong_1
+
+4. next_permutation(va.begin(), va.end())) //将区间的内容按下一种排序方式对字符串按字母递增顺序 看hongyong_2
+

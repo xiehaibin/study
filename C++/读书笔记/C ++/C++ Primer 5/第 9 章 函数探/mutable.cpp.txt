@@ -1,0 +1,11 @@
+struct str
+{
+  int a;
+  mutable int b;
+};
+
+const str = {11,12};
+str.a += 100;
+
+使用 mutable 修饰的变量 在常对象中是可改变的
+

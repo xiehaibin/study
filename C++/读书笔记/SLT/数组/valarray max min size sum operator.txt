@@ -1,0 +1,39 @@
+#include <valarray>
+#include <iostream>
+using namespace std;
+
+int arr[5] = {2,3,1,4,5};
+
+/*valarray<type> arry;         // 长度为0的空数组
+valarray<type> arry(8);        // 指定长度为空的数组
+valarray<type> arry(10, 8);    // 所有元素都被初始化为指定值的数组
+valarray<type> arry(arr, 5);   // 以常规数组中的值初始化数组*/
+
+/*operator[] : // 访问数组中的元素
+size :         // 返回数组中包含的元素数
+sum  :         // 返回所有元素的总和
+max  :         // 返回最大的元素
+min  :         // 返回最小的元素*/
+
+int main(void)
+{
+	valarray<int> arry(arr, 5);
+
+	cout<< arry.operator [](1)<<endl;
+	cout<< arry.size() <<endl;
+	cout<< arry.sum()  <<endl;
+	cout<< arry.max()  <<endl;
+	cout<< arry.min()  <<endl;
+
+	return 0;
+}
+
+int main(void)
+{
+	valarray<int>va(a, 5);
+	valarray<bool>vb = va>9;
+
+	ostream_iterator<bool, char>out(cout, " ");
+	copy(&vb[0], &vb[5], out);
+	return 0;
+}

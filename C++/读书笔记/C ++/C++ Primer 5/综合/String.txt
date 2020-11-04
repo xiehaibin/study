@@ -1,0 +1,6 @@
+  1. string 的对象可以使用数组表法 访问单个元素，长度自动化为0，而char型数组是不确定的。
+  2. 使用getline()读取一行数组，getline(cin, str),而不是cin.getline(cin, str)。
+cin指出到哪里去查找输入，string对象将根据字符串的长度自动调整大小。
+  3. istream类没有处理string类的方法 cin>>str 只是使用STRING类的一个友元函数。
+  4. c++不提倡使用外部变量，但提倡使用外部结构声明，在外部声明符号常量通常更合理
+  5. string 不使用空字符来标记字符串的未尾。

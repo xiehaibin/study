@@ -1,0 +1,1 @@
+cout.setf(ios::boolalpha); 显于 true 和 false  而不是 0 和 1;

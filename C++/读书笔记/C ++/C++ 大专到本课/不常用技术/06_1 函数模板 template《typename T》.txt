@@ -1,0 +1,35 @@
+1. 调用函数模板时， 函数参数的类型决定到底使用模板的哪个板本，也就是说 模板的参数是由参数推断出来的。
+
+
+2. 调用时可以显式地给出模板参数 “函数模板名<模板参数>（参数列表）” max<int>(2, 5), 可用在一些特殊的场合 
+
+   如果是 “max<int>(2.01, 5)” 就不能下确判断出模板的参数类形 ，
+
+   当然有方法比如：“max<int>(2.01, 5),”
+
+   更好的是 “max<double>(2.01, 5)”显式方式给出参数,  
+
+   //最好的是“template<typename T1, typename T2>”这样去定义 
+   
+
+3. typename 是C++专门定义的一个仅仅用在模板中的关键字, 
+   template<typename T> 
+   T max(T m1, T m2);
+
+
+template<typename T>
+void fun(T a, T b);
+
+int main(void)
+{
+	int a = 100;
+	double b = 1.111;
+	fun<int>(a, b); // 强转为INT
+}
+
+template<typename T>
+void fun(T a, T b)
+{
+	cout<<"a: "<< sizeof(a) <<endl;
+	cout<<"b: "<< sizeof(b) <<endl;
+}

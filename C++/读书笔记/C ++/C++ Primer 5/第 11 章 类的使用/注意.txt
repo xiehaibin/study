@@ -1,0 +1,10 @@
+int main(void)
+{
+	Cbox box1(10, 5, 2);
+	Cbox box2;    
+	Cbox box3;          // Cbox box3; 不能写成Cbox box3()此种形式(必须提供值) 否则编绎出错       
+
+        box3 = box2 = box1;
+	cout<< box3.GetV() <<endl;
+	return 0;
+}

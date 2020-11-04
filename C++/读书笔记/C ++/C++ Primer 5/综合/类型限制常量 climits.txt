@@ -1,0 +1,18 @@
+CHAR_BIT ------- char的位数
+CHAR_MAX ------- char的最大值
+CHAR_MIN ------- char的最小值
+SCHAR_MAX ------ signed char的最大值
+SCHAR_MIN ------ signed char的最小值
+UCHAR_MAX------- unsigned char的最大值
+
+SHRT_MIN ------- short的最大值
+SHAR_MIN ------- short的最小值
+USHAR_MAX ------ ubsigned char的最大值
+
+INT_MAX ------- int的最大值
+INT_MIN ------- int的最小值
+UINT_MAX ------ unsigned int的大值
+
+LONG_MAX ------- long最大值
+LONG_MIN ------- long最小值
+ULONG_MAX ------ unsigned的最大值

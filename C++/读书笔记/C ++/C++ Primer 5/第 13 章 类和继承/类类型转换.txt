@@ -1,0 +1,53 @@
+#include <cstring>
+#include <iostream>
+using namespace std;
+
+class A
+{
+private :
+	int s;
+	int w;
+public :
+	A(int a, int b)
+	{
+		s = a;
+		w = b;
+	}
+	virtual void print(void)  const
+	{
+		cout<< s <<" , "<< w <<endl;
+	}
+	virtual~A(void)
+	{
+		cout<<"Îö¹¹ A"<<endl;
+	}
+};
+
+class B : public A
+{
+private :
+	int h;
+public :
+	B(int a, int b, int c) : A(a, b)
+	{
+		h = c;
+	}
+	virtual void print(void) const
+	{
+		cout<<"h = "<< h <<endl;
+	}
+	virtual~B(void)
+	{
+		cout<<"Îö¹¹ b"<<endl;
+	}
+};
+
+int main(void)
+{
+	A a(1, 2);
+	B b(10, 20, 30);
+
+	B* pa = (B *) &a;
+	pa->print();
+	return 0;
+}

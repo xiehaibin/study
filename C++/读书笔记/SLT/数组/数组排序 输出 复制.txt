@@ -1,0 +1,38 @@
+1. 要输出数组的内容，对数组进行升幂排序，反转数组的内容，复制数组的内容等需要包含头文件<algorithm>。 
+2. 要对数组进行降幂排序和检索，要包含头文件<functional>。
+
+1. 数组内容反转
+reverse(a, a+len);           // 数组元素反转排列
+
+2. 复制数组的内容
+copy(a, a+len, b);           // 将数组a的内容原样复制到数组b
+reverse_copy(a, a+len, b);   // 将数组a的内容以反向复制到数组b
+
+3. 数组升幂排序
+sort(a, a+len);              // 默认排序方式是升幂
+
+4. 数组降幂排序
+sort(b, b+len, greater<type>());  // 包含头文件<functional>
+
+5. 查找数组内容
+find(a, a+len, value)   // value 要查找的元素
+
+type* x = find(a, a+len, value);
+if(x == a+len)  cout<<"没有找到"
+else            cout<<"有值为"value"的数组元素
+
+6. 输出数组的内容
+copy(a, a+len, ostream_iterator<type>(cout, "字符串")); 
+// 输出元素和"字符串" 内容组合在一起输出
+
+copy(a, a+len, ostream_iterator<type>(cout, " "));
+// 每个元素后面增加一个空格
+
+copy(a, a+len, ostream_iterator<type>(cout, "\n"));  
+// 在输出每个元素之后，换新行
+
+reverse_copy(a, a+len, ostream_iterator<type>(cout, "字符串")); // 反向输出
+reverse_copy(a, a+len, ostream_iterator<type>(cout, " "));  // 增加空格 
+reverse_copy(a, a+len, ostream_iterator<type>(cout, "\n")); // 换新行
+
+

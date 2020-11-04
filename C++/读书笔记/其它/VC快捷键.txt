@@ -1,0 +1,3 @@
+shitf+alt+Enter 全屏显于
+ctrl+k+f 整理
+F10  Dobug调试

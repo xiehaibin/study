@@ -1,0 +1,33 @@
+int main(void)
+{
+	char str1[5];
+	char str2[5];
+	cin>>str1;  //没法读取空格
+
+	cout<<endl;
+	cin>>str2;
+	cout<< str1<<" : "<<str2<<endl;
+	return 0;
+} 
+// cin>>将使用空白（空格 制表符 换行符）来定字符串的界。不能防止输入的字符比字符数组长情况(运行时出错) 。cin>>将把回车键生成的换行符留在输入队列中, cin将忽略回车和换行，(如果接下不是使用cin来输入，将使第二次读取的第一个字符为\0(使用cin.get()可以解决))。？？？(cin在获取字符数组输入时只读取单个的字符，如果在输入字符中有空格 将只获得空格前面的，但可以使用cin.get(ch) 来获取空格 和cin>>一样)
+
+2.get()和getline().这两个函数都能读取一行输入，直到到达换行符。 getline()将丢弃换行符（但有多的字符将留在队列中，将设置失郊位）
+  get(name, size)将换行符保留在输入序列中。
+
+  getline()通过回车换行符来确定输入结尾。 读取指定数目的字符或遇到换行符是停止读取。
+  
+  cin.get(name, size); 由于第一次调用后，换行符将留在输入队列中，因此第二次调用时看到 的第一个字符更是换行符。因此get(name, size)认为已到达行尾。而没有发现任何可读取的内容。如果不 借助于帮助get(name, size)将没法跨过该换行符。(就算不是换行符，是数组以满, get()还是会读取一个字符的)。
+  幸运的是，get()有另一种变体。使用不带参数的cin.get()调用可读取下一个字符（即使是换行符），因此可以用它来处理换行符，为读取下一行输入做准备。另外它在读取空行后将设置失效位，这意味接下来的输入将被中止(可以使用cin.clear()来恢);
+
+    cin.get(name, size).get()可以这样做，是由于cin.get(name, size)返回一个cin对象，该对相随后将用来调用get();
+
+   cin.getline(name, size).getline(name, size) 和两次调用cin.get(name, size)一样 (如果输入的字符个数比size多将导致第二个没法接受参数)。
+   cin.get(name, size).cin.get(name, size)将导致第二个没法接受参数。
+   对上面三句的总括（如果输入行包含的字符比指定的多，则getline(name, size)    get(name, size) 将会把剩下的字符留在输入队列中, getline(name, size)（get(name, size)不会）还会高置失效位，并关闭后面的输入）
+
+   有的编绎器没有实现不接受参数的get()版本，但实现了一个接受一个char参数的get()变体。
+要使用该变体必须定个char变量。（详请看 Primer  74）
+   
+  
+
+  

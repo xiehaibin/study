@@ -1,0 +1,46 @@
+                           1. 访问向量容量信息的方法
+
+注： 除非其它类型的特殊优点能够更好地满足程序的要求， 否则应默认使用这种类型
+
+1. size() : 返回当前向量中已经存放的对象的个数
+
+2. max_size() : 返回向量可容纳量多对象的个数 取决于硬件
+
+3. capacity() : 返回无需在次分配内存就能容纳对象个数 max_size() >= capacity() >= size()
+
+4. empty() : 当前对象为空时， 反回true值
+
+                           2. 访问向量中对象的方法
+
+1. front() : 返回向量中的第一个对象
+
+2. back() : 返回向量中的最后一个对象
+
+3. operator[](size_type, n) : 返回向量中的第n+1个对象(下标为n的向量元素)
+
+
+                          3. 在向量中插入对象的方法
+
+1. push_back(const T&) : 向向量尾部插入一个对象
+
+2. insert(iterator it, const T&) : 向it所指的向量位置前插入一个对象
+
+3. insert(iterator it, size_type n, const T&X) : 向it所指向量位置前插入N个值为X的对象
+
+4. insert(a.begin, b.begin+1, b.end) : 将b中除第一个元素以外的元素 插入到a的第一个元素前面 
+                                       这使得到矢量尾部插入元素非简单
+
+
+                         4. 在向量中删除对象的方法
+
+1. pop_back() : 删除向量中最后一个对象
+
+2. erase(iterator) : 删除it所指向的容器对象
+
+3. erase(begin, begin+2) : 将删除第 1个和第2个
+
+3. clear() : 删除向量中的所有对象，empty() 返回true值 
+
+                         5. 其它
+
+1. vc.swap(vb) : 交换两个容器的内容 如果是空哪交换后另一个将是空
